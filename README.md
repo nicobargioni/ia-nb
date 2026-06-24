@@ -31,8 +31,9 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S21 | **Múltiples comparaciones / FDR** (Benjamini-Hochberg: cuando probás muchas hipótesis) | Causalidad/Estadística | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-21/fdr_multiple.ipynb) |
 | S22 | **Agentes: el error compuesto** (p^n y cómo la verificación lo arregla) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-22/agente_error.ipynb) |
 | S23 | **Detección de anomalías: lo inesperado, no lo alto** (diferencia estacional + umbral robusto MAD) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-23/anomalias.ipynb) |
+| S24 | **El test del baseline** 🏁 (capstone: ¿vale la pena la complejidad? lift y la métrica correcta) | Síntesis | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-24/baseline_test.ipynb) |
 
-*(se van sumando semana a semana)*
+**Serie completa: 24 semanas, 24 notebooks.** 🏁
 
 ## Cómo usar
 Click en el badge **Open in Colab** → `Entorno de ejecución → Ejecutar todo`. La primera celda instala lo necesario.
@@ -42,5 +43,10 @@ Cada notebook se genera con su `build_notebook.py`:
 ```bash
 python3 build_notebook.py
 ```
+
+## El hilo de las 24 semanas
+Una sola idea, vista desde 24 ángulos: **tirarle un LLM (o un modelo complejo) encima no reemplaza el criterio que dan los fundamentos.** Un modelo te da una predicción; no te dice contra qué compararla (el baseline), qué métrica importa, dónde está la trampa en los datos, ni si el problema valía la pena. Eso lo ponés vos — y es la parte que no se automatiza.
+
+El notebook de cierre ([S24 · el test del baseline](semana-24/baseline_test.ipynb)) lo resume: ningún número vale en absoluto, vale por cuánto le gana a la versión tonta del problema, medido con la métrica que no te miente.
 
 🇦🇷 Hecho para entender, no solo para usar.
