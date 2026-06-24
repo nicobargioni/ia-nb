@@ -10,6 +10,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 |---|------|-------|-------|
 | S1 | **Búsqueda híbrida: por qué los vectores solos pierden** (dense vs BM25, fusión RRF) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-01/retrieval_hibrido.ipynb) |
 | S2 | **Conformal prediction: incertidumbre con garantía** (sets con cobertura garantizada, distribution-free) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-02/conformal_prediction.ipynb) |
+| S3 | **Diferencias-en-diferencias: causalidad sin A/B** (efecto causal sin experimento, con regresión) | Causalidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-03/diff_in_diff.ipynb) |
 
 *(se van sumando semana a semana)*
 
