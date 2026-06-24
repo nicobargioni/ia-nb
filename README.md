@@ -17,6 +17,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S7 | **Reranking medido: cuánto sube el nDCG** (retrieve generoso + rerank top-k) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-07/reranking_ndcg.ipynb) |
 | S8 | **Calibración: que el 0.9 signifique 0.9** (Brier, ECE, Platt vs isotónica) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-08/calibracion.ipynb) |
 | S9 | **Propensity score matching: causalidad sin experimento** (datos observacionales) | Causalidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-09/propensity_matching.ipynb) |
+| S10 | **Costo de un LLM en producción: prompt vs RAG vs fine-tune** (break-even) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-10/costo_llm.ipynb) |
 
 *(se van sumando semana a semana)*
 
