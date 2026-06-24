@@ -24,6 +24,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S14 | **La curva de sesgo-varianza** (por qué el modelo más complejo no gana) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-14/sesgo_varianza.ipynb) |
 | S15 | **Double Machine Learning** (ML para confounders sin sesgar la causalidad) | Causalidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-15/double_ml.ipynb) |
 | S16 | **Semantic caching (y su trampa)** (ahorro de llamadas LLM vs respuestas equivocadas) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-16/semantic_cache.ipynb) |
+| S17 | **Forecast: baseline vs ML** (el seasonal naive que cuesta ganar) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-17/baseline_vs_ml.ipynb) |
 
 *(se van sumando semana a semana)*
 
