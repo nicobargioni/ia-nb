@@ -27,6 +27,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S17 | **Forecast: baseline vs ML** (el seasonal naive que cuesta ganar) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-17/baseline_vs_ml.ipynb) |
 | S18 | **Monitor de drift sobre un stream** (PSI: detectar el cambio antes de que duela) | MLOps | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-18/drift_monitor.ipynb) |
 | S19 | **Chunking medido** (cómo cortás decide cuánto recupera tu RAG) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-19/chunking.ipynb) |
+| S20 | **Bootstrap: intervalos de confianza para cualquier estadístico** (sin fórmula, sin asumir distribución) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-20/bootstrap.ipynb) |
 
 *(se van sumando semana a semana)*
 
