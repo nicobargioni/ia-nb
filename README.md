@@ -12,6 +12,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S2 | **Conformal prediction: incertidumbre con garantía** (sets con cobertura garantizada, distribution-free) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-02/conformal_prediction.ipynb) |
 | S3 | **Diferencias-en-diferencias: causalidad sin A/B** (efecto causal sin experimento, con regresión) | Causalidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-03/diff_in_diff.ipynb) |
 | S4 | **Constrained decoding: JSON válido por construcción** (structured output, mecanismo de masking) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-04/structured_output.ipynb) |
+| S5 | **Backtesting honesto: walk-forward vs CV ingenuo** (leakage temporal medido) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-05/backtesting_walkforward.ipynb) |
 
 *(se van sumando semana a semana)*
 
