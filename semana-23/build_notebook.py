@@ -1,0 +1,109 @@
+"""Genera anomalias.ipynb — Semana 23 (jueves) de 'IA sin humo'.
+Detección de anomalías en series: el umbral fijo marca picos estacionales (falsos);
+detectar sobre la diferencia estacional encuentra lo realmente inesperado. Free (numpy)."""
+import json
+cells = []
+def md(s):   cells.append(("markdown", s))
+def code(s): cells.append(("code", s))
+
+md(r"""# 🚨 Detección de anomalías: lo inesperado, no lo alto""")
+
+code(r"""from IPython.display import display, HTML
+display(HTML('''
+<div style="font-family:Montserrat,system-ui,sans-serif;width:100%;box-sizing:border-box;border-radius:16px;overflow:hidden;
+            box-shadow:0 14px 56px rgba(0,0,0,.55);border:1px solid rgba(79,184,232,.28);margin:6px 0">
+  <div style="padding:44px 30px;text-align:center;color:#eef7fb;
+       background:radial-gradient(120% 90% at 12% -12%, rgba(79,184,232,.34), transparent 52%),
+                  radial-gradient(90% 80% at 90% 120%, rgba(38,86,116,.5), transparent 60%),
+                  linear-gradient(160deg,#08161f,#0a1b27 55%,#061019)">
+    <div style="font-size:2.1em;filter:drop-shadow(0 0 12px rgba(124,200,238,.7))">🚨 📈 🔎</div>
+    <h1 style="margin:.1em 0 0;font-size:1.95em;font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em">
+       Anomalías: lo <span style="color:#4fb8e8;text-shadow:0 0 26px rgba(79,184,232,.7)">inesperado</span>, no lo alto</h1>
+    <div style="font-size:.95em;color:#7cc8ee;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-top:10px">
+       IA sin humo · Semana 23 · Series temporales</div>
+    <div style="margin-top:14px;font-size:.92em;color:#bcdcec;max-width:560px;margin-left:auto;margin-right:auto">
+       Un umbral fijo marca cada pico estacional como 'anomalía' y se pierde la caída
+       real. Detectar sobre lo que el patrón NO explica cambia todo.</div>
+  </div>
+</div>
+<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');</style>
+'''))""")
+
+md(r"""## 0 · Preparación""")
+
+code(r"""import numpy as np, matplotlib.pyplot as plt
+from IPython.display import display, HTML
+rng = np.random.default_rng(18)
+NIGHT="#0a1b27"; INK="#bcdcec"; BEAM="#4fb8e8"; CELESTE="#8fc0e8"; MIST="#6f93a8"; CORAL="#e88a8a"; GOLD="#e8b86a"; LINE="#15303f"
+plt.rcParams.update({"figure.figsize":(9,4.2),"figure.facecolor":NIGHT,"axes.facecolor":NIGHT,
+  "savefig.facecolor":NIGHT,"axes.edgecolor":LINE,"axes.labelcolor":INK,"text.color":INK,
+  "axes.titlecolor":INK,"xtick.color":MIST,"ytick.color":MIST,"axes.grid":True,"grid.color":LINE,
+  "grid.alpha":.5,"font.size":11,"legend.framealpha":0})
+def intro(emoji,titulo,parrafos):
+    ps="".join(f'<p style="margin:0 0 11px;color:#cfe3ef;font-size:.97em;line-height:1.62">{p}</p>' for p in parrafos)
+    return HTML(f'''<div style="font-family:Montserrat,system-ui,sans-serif;width:100%;box-sizing:border-box;
+      background:linear-gradient(135deg,#0a1b27,#102b3c 55%,#15384b);border:1px solid rgba(79,184,232,.22);
+      border-left:5px solid #4fb8e8;border-radius:12px;padding:20px 26px;margin:6px 0;color:#eef7fb;box-shadow:0 8px 30px rgba(0,0,0,.35)">
+      <div style="font-size:1.3em;font-weight:800;text-transform:uppercase;margin-bottom:12px">{emoji}&nbsp;{titulo}</div>{ps}</div>''')
+print("Listo.")""")
+
+md(r"""## 1 · El umbral fijo: la fábrica de falsas alarmas""")
+
+code(r"""display(intro("⚠️", "1 · 'Avisame si supera X'", [
+ "<b>De qué se trata.</b> Serie diaria con estacionalidad semanal fuerte (los días suben y bajan según el día de la semana) más unas anomalías inyectadas (eventos reales: dos picos, dos caídas) que NO siguen el patrón. Probamos la alerta más común: marcar como anomalía todo valor que se aparta de la media.",
+ "<b>Qué vas a ver.</b> El umbral fijo marca TODOS los picos estacionales (que son normales) como anomalías → un montón de falsas alarmas. Y encima se pierde las caídas reales, porque mira 'valores altos', no 'valores inesperados'.",
+ "🧮 <b>Dónde mirar.</b> La cantidad de falsos positivos del umbral crudo. Cada pico esperado dispara una alarma inútil.",
+]))
+n=210; t=np.arange(n); S=7
+serie=20+0.03*t+8*np.sin(2*np.pi*t/S)+rng.normal(0,0.8,n)
+anom=np.array([40,95,150,180]); serie[anom]+=np.array([16,-15,18,-14])
+flag_naive = serie>serie.mean()+1.0*serie.std()
+hit_n=len(set(np.where(flag_naive)[0])&set(anom.tolist()))
+print(f"Anomalías reales inyectadas en: {list(anom)}")
+print(f"Umbral fijo: {flag_naive.sum()} alarmas, {hit_n}/4 anomalías reales, {flag_naive.sum()-hit_n} FALSAS (picos estacionales)")""")
+
+md(r"""📝 **Lectura.** El umbral fijo es un desastre: dispara decenas de falsas alarmas (cada pico estacional, que es perfectamente normal) y encima se pierde la mayoría de las anomalías reales — porque busca 'valores altos', cuando dos de las anomalías son CAÍDAS. El error de fondo: confunde 'alto' con 'anómalo'. Un lunes de tráfico alto no es una anomalía; lo es un lunes con tráfico inesperadamente bajo.""")
+
+md(r"""## 2 · Detectar sobre lo que el patrón no explica""")
+
+code(r"""display(intro("🔎", "2 · Diferencia estacional + umbral robusto", [
+ "<b>De qué se trata.</b> En vez de mirar el valor crudo, miramos cuánto se aparta cada día de lo ESPERADO. La forma más simple: comparar cada día con el mismo día de la semana pasada (diferencia estacional). Eso quita tendencia y estacionalidad de un saque; lo que queda es 'lo inesperado'. Marcamos anomalía con un umbral robusto (mediana ± k·MAD), que no se deja arrastrar por los propios outliers.",
+ "<b>Qué vas a ver.</b> Este método encuentra las 4 anomalías reales (picos Y caídas) e ignora los picos estacionales. Comparado con el umbral fijo, pasa de un mar de falsas alarmas a señal limpia.",
+ "🧮 <b>Dónde mirar.</b> El recall sobre las anomalías reales y la caída brutal de falsos positivos. La anomalía es el desvío del patrón, no el valor absoluto.",
+]))
+d=np.full(n,np.nan); d[S:]=serie[S:]-serie[:-S]
+v=~np.isnan(d); med=np.median(d[v]); mad=np.median(np.abs(d[v]-med))*1.4826
+flag=np.zeros(n,bool); flag[v]=np.abs(d[v]-med)>4*mad
+hit=len(set(np.where(flag)[0])&set(anom.tolist()))
+print(f"Diferencia estacional + MAD: recall {hit}/4, {flag.sum()-hit} falsos (ecos a +7 días)")
+print(f"vs umbral fijo: recall {hit_n}/4, {flag_naive.sum()-hit_n} falsos")
+fig,(a1,a2)=plt.subplots(2,1,figsize=(9,6),sharex=True)
+a1.plot(t,serie,color=MIST,lw=1); a1.scatter(np.where(flag_naive)[0],serie[flag_naive],color=CORAL,s=18,label="alarmas")
+a1.scatter(anom,serie[anom],facecolors='none',edgecolors=GOLD,s=90,lw=2,label="anomalías reales")
+a1.set_title("Umbral fijo: marca picos estacionales (falsas alarmas)"); a1.legend(fontsize=8)
+a2.plot(t,serie,color=MIST,lw=1); a2.scatter(np.where(flag)[0],serie[flag],color=BEAM,s=18,label="alarmas")
+a2.scatter(anom,serie[anom],facecolors='none',edgecolors=GOLD,s=90,lw=2,label="anomalías reales")
+a2.set_title("Diferencia estacional: encuentra lo inesperado"); a2.legend(fontsize=8); a2.set_xlabel("día")
+plt.tight_layout(); plt.show()""")
+
+md(r"""📝 **Lectura.** Mirá los dos paneles: arriba, el umbral fijo pinta de rojo todos los picos estacionales (falsas alarmas) y deja sin marcar las caídas reales. Abajo, la diferencia estacional marca exactamente las 4 anomalías reales —picos Y caídas— e ignora la estacionalidad. (Los pocos falsos del segundo método son 'ecos': la diferencia a 7 días hace que cada anomalía aparezca también una semana después; se filtran fácil.)
+
+La idea central: detectar lo raro empieza por modelar lo normal. Restá el patrón (acá, comparando contra el mismo día de la semana pasada) y buscá la anomalía en lo que queda.""")
+
+md(r"""## 3 · Cierre""")
+
+code(r"""display(intro("💡", "3 · El para qué", [
+ "<b>El punto.</b> Una anomalía no es un valor alto, es un valor INESPERADO dado el contexto. El umbral fijo sobre el valor crudo confunde estacionalidad con anomalía: te llena de falsas alarmas y te esconde lo que importa.",
+ "<b>Cómo.</b> Detectá sobre lo que el patrón no explica: la diferencia estacional (vs el mismo período anterior) o el residuo de una descomposición (STL). Usá umbrales robustos (mediana/MAD), no media/desvío, para que un outlier no infle el umbral.",
+ "<b>El criterio.</b> Las alertas que gritan en cada pico esperado terminan ignoradas (el que avisa siempre, no avisa nada). Modelar lo normal antes de buscar lo raro es lo que hace que una alerta sea útil en vez de ruido.",
+]))
+print(f"dif. estacional: recall {hit}/4, {flag.sum()-hit} falsos  ·  umbral fijo: {hit_n}/4, {flag_naive.sum()-hit_n} falsos")
+print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+
+def to_source(s): return s.splitlines(keepends=True)
+nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"
+  else {"cell_type":"code","metadata":{},"execution_count":None,"outputs":[],"source":to_source(x)}) for (t,x) in cells],
+  "metadata":{"colab":{"provenance":[]},"kernelspec":{"name":"python3","display_name":"Python 3"},"language_info":{"name":"python"}},
+  "nbformat":4,"nbformat_minor":5}
+with open("anomalias.ipynb","w",encoding="utf-8") as f: json.dump(nb,f,ensure_ascii=False,indent=1)
+print(f"OK -> anomalias.ipynb ({len(cells)} celdas)")

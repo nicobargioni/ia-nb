@@ -30,6 +30,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S20 | **Bootstrap: intervalos de confianza para cualquier estadístico** (sin fórmula, sin asumir distribución) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-20/bootstrap.ipynb) |
 | S21 | **Múltiples comparaciones / FDR** (Benjamini-Hochberg: cuando probás muchas hipótesis) | Causalidad/Estadística | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-21/fdr_multiple.ipynb) |
 | S22 | **Agentes: el error compuesto** (p^n y cómo la verificación lo arregla) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-22/agente_error.ipynb) |
+| S23 | **Detección de anomalías: lo inesperado, no lo alto** (diferencia estacional + umbral robusto MAD) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-23/anomalias.ipynb) |
 
 *(se van sumando semana a semana)*
 
