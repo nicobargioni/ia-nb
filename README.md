@@ -15,6 +15,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S5 | **Backtesting honesto: walk-forward vs CV ingenuo** (leakage temporal medido) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-05/backtesting_walkforward.ipynb) |
 | S6 | **Feature importance honesta: impurity vs permutation** (la trampa de las correlacionadas) | Interpretabilidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-06/feature_importance.ipynb) |
 | S7 | **Reranking medido: cuánto sube el nDCG** (retrieve generoso + rerank top-k) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-07/reranking_ndcg.ipynb) |
+| S8 | **Calibración: que el 0.9 signifique 0.9** (Brier, ECE, Platt vs isotónica) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-08/calibracion.ipynb) |
 
 *(se van sumando semana a semana)*
 
