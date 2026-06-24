@@ -125,8 +125,6 @@ print(f"\nEl coeficiente de interacción ({beta[3]:.2f}) = el efecto causal esti
 md(r"""📝 **Lectura.** El coeficiente de la interacción `tratado×post` da el mismo ~5: es diff-in-diff escrito como regresión. Esta forma es la que usás en serio, porque escala a muchos grupos y períodos, te da intervalos de confianza, y te deja sumar covariables.
 
 Diff-in-diff es la tesis de la serie en estado puro: no es un modelo gigante ni un LLM, es una **idea estadística simple** —una resta doble apoyada en un supuesto explícito (tendencias paralelas)— que te deja estimar causalidad cuando no podés randomizar. El criterio está en saber *cuándo* el supuesto se sostiene, y eso lo ponés vos.
-
-— Serie *IA sin humo* · github.com/nicobargioni/ia-nb
 """)
 
 def to_source(s): return s.splitlines(keepends=True)

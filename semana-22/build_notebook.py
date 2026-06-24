@@ -96,8 +96,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Qué hacer.</b> (1) Menos pasos: cada uno que sacás sube la confiabilidad total. (2) Verificá cada paso con código, no con fe. (3) Checkpoints y recuperación para que un error no descarrile todo. (4) Para tareas predecibles, un workflow fijo con LLMs en pasos puntuales le gana a un agente libre.",
  "<b>El criterio.</b> Antes de darle 10 pasos a un agente, hacé la cuenta: p^n. Si no te cierra, el problema no es el modelo, es la arquitectura. A veces lo más inteligente no es el agente más autónomo, es el flujo más corto y verificado.",
 ]))
-print(f"cadena 10 pasos @90%/paso: sin verif {0.90**10:.0%} -> con verif(0.95) {chain(10,0.95):.0%}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"cadena 10 pasos @90%/paso: sin verif {0.90**10:.0%} -> con verif(0.95) {chain(10,0.95):.0%}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

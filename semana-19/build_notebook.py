@@ -97,8 +97,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Qué hacer.</b> Cortá respetando la estructura (párrafos, secciones, headings), usá overlap para no perder lo del borde, y ajustá el tamaño al contenido (ni tan chico que pierda contexto, ni tan grande que diluya). Medí la supervivencia/recall, no lo asumas.",
  "<b>El criterio.</b> Antes de cambiar de modelo de embeddings, de pagar uno premium o de sumar un reranker, mirá tus chunks. El 90% de las mejoras de un RAG real están en esa decisión aburrida, no en el modelo brillante.",
 ]))
-print(f"fijo sin overlap: {fijo:.0%}  ·  con overlap 60: {survival(200,60):.0%}  ·  estructura: ~{estructura:.0%}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"fijo sin overlap: {fijo:.0%}  ·  con overlap 60: {survival(200,60):.0%}  ·  estructura: ~{estructura:.0%}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

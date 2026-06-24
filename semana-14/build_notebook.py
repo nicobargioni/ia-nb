@@ -104,8 +104,7 @@ code(r"""display(intro("💡", "3 · El para qué (y un matiz moderno)", [
  "<b>Cómo elegir.</b> Curva de validación (como esta), regularización, o validación cruzada (respetando el tiempo si es serie). El objetivo es generalizar, no memorizar.",
  "<b>El matiz moderno (double descent).</b> En modelos MUY sobreparametrizados (redes gigantes, muchísimos más parámetros que datos), se observó que tras el pico de la U el error vuelve a bajar — un fenómeno llamado double descent que matiza la intuición clásica. Pero para la mayoría de los modelos tabulares, la U de sesgo-varianza sigue mandando.",
 ]))
-print(f"Óptimo: grado {best}.  El criterio: validar, no minimizar el error de entrenamiento.")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"Óptimo: grado {best}.  El criterio: validar, no minimizar el error de entrenamiento.")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

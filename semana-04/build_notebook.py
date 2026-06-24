@@ -135,8 +135,7 @@ code(r"""display(intro("💡", "4 · El para qué", [
 ]))
 print("Resumen:")
 print(f"  sin restricción : {val_sin:.1%} válido")
-print(f"  con restricción : {val_con:.1%} válido")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"  con restricción : {val_con:.1%} válido")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

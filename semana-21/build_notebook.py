@@ -102,8 +102,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Qué hacer.</b> Si probás más de un puñado de hipótesis, corregí: Benjamini-Hochberg (FDR) como default, Bonferroni si necesitás ser muy estricto. Y la regla de oro: definí qué vas a testear ANTES de mirar los datos.",
  "<b>El criterio.</b> Dónde aparece esto: dashboards con decenas de métricas, A/B con muchas métricas secundarias, análisis de subgrupos, feature selection masiva. En todos, sin corrección, vas a 'descubrir' patrones que son ruido. Saberlo —y corregirlo— es lo que separa un hallazgo de una casualidad disfrazada.",
 ]))
-print(f"FDP ingenuo {fdp_n:.0%} -> BH {fdp_b:.0%}  ·  poder {pw_n:.0%} -> {pw_b:.0%}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"FDP ingenuo {fdp_n:.0%} -> BH {fdp_b:.0%}  ·  poder {pw_n:.0%} -> {pw_b:.0%}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

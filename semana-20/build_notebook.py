@@ -103,8 +103,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Cuándo brilla.</b> Justo cuando no hay fórmula simple: medianas, percentiles, ratios, métricas de negocio a medida, diferencias entre grupos. Y cuando dudás de que tus datos sean normales (casi siempre).",
  "<b>El criterio.</b> Un número sin intervalo es media respuesta. El bootstrap es la navaja suiza de la incertidumbre: simple, general y honesto. No saber que existe te deja reportando puntos donde deberías reportar rangos.",
 ]))
-print(f"bootstrap: {cov_b:.1%} de cobertura  ·  fórmula ingenua: {cov_n:.1%}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"bootstrap: {cov_b:.1%} de cobertura  ·  fórmula ingenua: {cov_n:.1%}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

@@ -124,8 +124,7 @@ code(r"""display(intro("💡", "4 · El para qué", [
  "<b>El criterio.</b> Entender que recuperación y ordenamiento son dos problemas distintos —y que cada uno tiene su herramienta— es lo que te deja mejorar el buscador sin gastar de más. No es un modelo más grande; es la arquitectura correcta.",
 ]))
 print(f"nDCG@10 solo bi-encoder : {m_bi:.3f}")
-print(f"nDCG@10 con reranking   : {m_re:.3f}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"nDCG@10 con reranking   : {m_re:.3f}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

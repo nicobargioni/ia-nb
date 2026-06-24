@@ -110,8 +110,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Cómo.</b> Medí con Brier y ECE (no con accuracy). Mirá el reliability diagram. Calibrá con Platt o isotónica sobre un set aparte. Tres pasos, mejora directa.",
  "<b>El criterio.</b> 'Predecir la clase' y 'reportar una probabilidad confiable' son objetivos distintos. Saber cuál necesitás —y medir el correcto— es lo que separa un modelo de demo de uno que sostiene decisiones.",
 ]))
-print("Resumen ECE:", {k: round(v[1],3) for k,v in results.items()})
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print("Resumen ECE:", {k: round(v[1],3) for k,v in results.items()})""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

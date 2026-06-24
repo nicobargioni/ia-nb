@@ -101,8 +101,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>El límite de siempre.</b> Como toda técnica causal observacional, solo corrige los confounders que MEDISTE. Si falta uno importante, el sesgo vuelve. El ML no te salva de eso: identificar los confounders correctos sigue siendo juicio humano.",
  "<b>El criterio.</b> ML y causalidad no son lo mismo. Un modelo predictivo excelente puede dar una estimación causal pésima si lo usás directo. Double ML es el puente correcto — pero el puente no reemplaza saber qué pregunta causal estás respondiendo.",
 ]))
-print(f"ingenuo={naive:.2f}  ·  Double ML={dml:.2f}  ·  real={THETA}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"ingenuo={naive:.2f}  ·  Double ML={dml:.2f}  ·  real={THETA}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

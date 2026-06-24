@@ -96,8 +96,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>El stack mínimo.</b> PSI o tests de distribución (KS, chi-cuadrado) sobre las features en ventanas; monitorear también la distribución de las predicciones; y, cuando llega el resultado real, la métrica de performance (lo único que detecta concept drift). Umbrales de acción definidos de antemano.",
  "<b>El criterio.</b> 'Entrené un buen modelo' y 'tengo un buen sistema en producción' son cosas distintas. La diferencia es, en buena parte, el monitoreo. Un modelo sin detección de drift es una bomba de tiempo que anda perfecto… hasta que no.",
 ]))
-print(f"drift real: paso {shift}  ·  alarma del monitor: paso {alarma}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"drift real: paso {shift}  ·  alarma del monitor: paso {alarma}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

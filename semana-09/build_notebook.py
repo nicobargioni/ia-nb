@@ -103,8 +103,7 @@ code(r"""display(intro("⚠️", "3 · El para qué y el límite", [
  "<b>El límite, que es enorme.</b> Solo corrige los confounders que MEDISTE (acá, Z). Si existe una variable no observada que influye en tratamiento y resultado, el matching NO la corrige y el sesgo vuelve. No hay forma estadística de descartar ese riesgo: se argumenta con conocimiento del dominio.",
  "<b>El criterio.</b> El método es mecánico; la parte difícil —y que ningún algoritmo hace por vos— es defender que mediste los confounders que importan. Ahí está el juicio causal.",
 ]))
-print(f"Real: {TE}   Ingenuo: {naive:.2f}   Matching: {matched:.2f}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"Real: {TE}   Ingenuo: {naive:.2f}   Matching: {matched:.2f}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

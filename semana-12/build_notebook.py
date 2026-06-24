@@ -115,8 +115,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
 ]))
 print("Contrafactuales encontrados:")
 if d_ing is not None: print(f"   ingreso +{d_ing:.0f}k")
-if d_deu is not None: print(f"   deuda  -{d_deu:.0f}k")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+if d_deu is not None: print(f"   deuda  -{d_deu:.0f}k")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

@@ -115,8 +115,7 @@ code(r"""display(intro("🏁", "El criterio que cierra IA sin humo", [
 ]))
 print(f"Forecast   : naive {mae_naive:.1f} -> modelo {mae_m:.1f}  (lift {liftA:.0f}%, vale la pena)")
 print(f"Clasificac.: accuracy 0.91 == baseline 0.91 (lift 0), pero AUC 0.50 -> {auc:.2f}")
-print("\nGracias por leer las 24 semanas. — IA sin humo")
-print("github.com/nicobargioni/ia-nb")""")
+print("\nGracias por leer las 24 semanas. — IA sin humo")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

@@ -97,8 +97,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Cómo.</b> Detectá sobre lo que el patrón no explica: la diferencia estacional (vs el mismo período anterior) o el residuo de una descomposición (STL). Usá umbrales robustos (mediana/MAD), no media/desvío, para que un outlier no infle el umbral.",
  "<b>El criterio.</b> Las alertas que gritan en cada pico esperado terminan ignoradas (el que avisa siempre, no avisa nada). Modelar lo normal antes de buscar lo raro es lo que hace que una alerta sea útil en vez de ruido.",
 ]))
-print(f"dif. estacional: recall {hit}/4, {flag.sum()-hit} falsos  ·  umbral fijo: {hit_n}/4, {flag_naive.sum()-hit_n} falsos")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"dif. estacional: recall {hit}/4, {flag.sum()-hit} falsos  ·  umbral fijo: {hit_n}/4, {flag_naive.sum()-hit_n} falsos")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

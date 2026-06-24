@@ -167,8 +167,6 @@ md(r"""## 🏁 Cierre
 | **Híbrida (RRF)** | ✅ | ✅ |
 
 Los embeddings no son la respuesta a todo. **Combinar** un buscador semántico con uno léxico —dos herramientas simples— le gana a tirarle un modelo más grande encima. Ahí está el criterio.
-
-— Serie *IA sin humo* · github.com/nicobargioni
 """)
 
 def to_source(s): return s.splitlines(keepends=True)

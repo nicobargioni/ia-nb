@@ -118,8 +118,7 @@ code(r"""display(intro("💡", "4 · El para qué", [
  "<b>El criterio.</b> No es un modelo más complejo lo que arregla esto: es entender que el tiempo tiene una flecha y respetarla. La validación honesta es la que te ahorra perder plata con convicción.",
 ]))
 print(f"CV ingenuo (shuffle):  R² = {naive:.3f}")
-print(f"Walk-forward (honesto): R² = {wf:.3f}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"Walk-forward (honesto): R² = {wf:.3f}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

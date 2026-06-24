@@ -95,8 +95,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Las herramientas.</b> Quantile regression (lo que vimos: predecís percentiles directo) o conformal prediction (intervalos con cobertura garantizada, sin asumir distribución; lo vimos en otra semana). Las dos te dan rango en vez de punto.",
  "<b>El criterio.</b> Reportar solo el punto se ve 'más profesional' pero es menos riguroso: esconde lo que no sabés. Un forecast honesto comunica su incertidumbre. El rango no es el adorno, es la respuesta.",
 ]))
-print(f"Cobertura: {cov:.1%}  ·  ancho medio: {ancho.mean():.2f}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"Cobertura: {cov:.1%}  ·  ancho medio: {ancho.mean():.2f}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

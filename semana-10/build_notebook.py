@@ -97,8 +97,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>El criterio.</b> Empezá por lo barato y reversible (prompt → RAG); subí a fine-tune solo si el volumen Y la necesidad lo justifican. Y bajá costo con caché y prompts más cortos antes de cambiar de estrategia.",
 ]))
 print("Costo por llamada:", {k: round(v,6) for k,v in per_call.items()})
-print(f"Break-even fine-tune vs prompt-only: ~{be:,.0f} llamadas")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"Break-even fine-tune vs prompt-only: ~{be:,.0f} llamadas")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

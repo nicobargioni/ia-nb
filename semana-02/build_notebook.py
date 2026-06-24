@@ -129,8 +129,6 @@ for thr in [0.05, 0.10, 0.20]:
 md(r"""📝 **Lectura.** Subir la exigencia de cobertura (de 90% a 95% a 99%) agranda los sets: el modelo tiene que 'incluir más opciones' para garantizarte que no se le escape la verdadera. Esa es exactamente la decisión de negocio que conformal hace **explícita** en vez de barrerla bajo la alfombra.
 
 Conformal prediction es un caso perfecto de la tesis de la serie: no es un modelo más grande ni un LLM, es una **herramienta estadística sólida** que te da algo que ningún modelo escupe solo — una garantía honesta sobre su propia incertidumbre. Ahí está el criterio.
-
-— Serie *IA sin humo* · github.com/nicobargioni/ia-nb
 """)
 
 def to_source(s): return s.splitlines(keepends=True)

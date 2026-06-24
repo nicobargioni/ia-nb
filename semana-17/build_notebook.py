@@ -96,8 +96,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>El error común.</b> Reportar 'mi modelo tiene MAE 1.3' sin decir que el seasonal naive tiene 1.2. Suena bien en aislamiento; comparado con el baseline, es peor. La métrica sola engaña; la métrica CONTRA el baseline informa.",
  "<b>El criterio.</b> Siempre, antes de festejar un modelo: ¿le gana al baseline tonto? Si no, el problema no necesitaba ML, o tus features no tienen señal extra. La sofisticación se mide contra lo trivial — es la espina dorsal de toda la serie.",
 ]))
-print(f"seasonal naive={e_snaive:.2f}  vs  ML={e_ml:.2f}  → ", "el baseline aguanta" if e_snaive<=e_ml else "el ML gana")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"seasonal naive={e_snaive:.2f}  vs  ML={e_ml:.2f}  → ", "el baseline aguanta" if e_snaive<=e_ml else "el ML gana")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"

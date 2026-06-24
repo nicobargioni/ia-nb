@@ -100,8 +100,7 @@ code(r"""display(intro("💡", "3 · El para qué", [
  "<b>Lo que falta (y necesita LLM-judge).</b> Acá medimos el RETRIEVAL. La otra mitad —si la RESPUESTA generada es fiel al contexto (faithfulness), si responde la pregunta (answer relevance)— se mide con un LLM como juez. Librerías como RAGAS automatizan eso, pero requieren una API key.",
  "<b>El criterio.</b> 'Si no lo podés medir, no lo podés mejorar' no es una frase de cuaderno: es la diferencia entre iterar con evidencia y dar vueltas con onda. Empezá por el golden set; es lo más aburrido y lo más importante.",
 ]))
-print(f"recall@5={rec[2]:.2f}  hit@5={hit[2]:.2f}  MRR={mr:.2f}")
-print("\n— Serie 'IA sin humo' · github.com/nicobargioni/ia-nb")""")
+print(f"recall@5={rec[2]:.2f}  hit@5={hit[2]:.2f}  MRR={mr:.2f}")""")
 
 def to_source(s): return s.splitlines(keepends=True)
 nb={"cells":[({"cell_type":"markdown","metadata":{},"source":to_source(x)} if t=="markdown"
