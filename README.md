@@ -20,6 +20,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S10 | **Costo de un LLM en producción: prompt vs RAG vs fine-tune** (break-even) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-10/costo_llm.ipynb) |
 | S11 | **Forecast con intervalos (quantile regression)** (predecir el rango, no el punto) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-11/forecast_intervalos.ipynb) |
 | S12 | **Counterfactuals: qué cambiar para dar vuelta la decisión** (explicaciones accionables) | Interpretabilidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-12/counterfactuals.ipynb) |
+| S13 | **Evaluar un RAG: golden set y métricas de retrieval** (recall@k, hit@k, MRR) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-13/rag_eval.ipynb) |
 
 *(se van sumando semana a semana)*
 
