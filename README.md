@@ -19,6 +19,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S9 | **Propensity score matching: causalidad sin experimento** (datos observacionales) | Causalidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-09/propensity_matching.ipynb) |
 | S10 | **Costo de un LLM en producción: prompt vs RAG vs fine-tune** (break-even) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-10/costo_llm.ipynb) |
 | S11 | **Forecast con intervalos (quantile regression)** (predecir el rango, no el punto) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-11/forecast_intervalos.ipynb) |
+| S12 | **Counterfactuals: qué cambiar para dar vuelta la decisión** (explicaciones accionables) | Interpretabilidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-12/counterfactuals.ipynb) |
 
 *(se van sumando semana a semana)*
 
