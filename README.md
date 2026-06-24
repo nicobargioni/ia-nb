@@ -21,6 +21,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S11 | **Forecast con intervalos (quantile regression)** (predecir el rango, no el punto) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-11/forecast_intervalos.ipynb) |
 | S12 | **Counterfactuals: qué cambiar para dar vuelta la decisión** (explicaciones accionables) | Interpretabilidad | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-12/counterfactuals.ipynb) |
 | S13 | **Evaluar un RAG: golden set y métricas de retrieval** (recall@k, hit@k, MRR) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-13/rag_eval.ipynb) |
+| S14 | **La curva de sesgo-varianza** (por qué el modelo más complejo no gana) | Incertidumbre | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-14/sesgo_varianza.ipynb) |
 
 *(se van sumando semana a semana)*
 
