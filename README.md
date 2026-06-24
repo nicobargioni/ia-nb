@@ -26,6 +26,7 @@ Cuaderno por cuaderno de la serie **IA sin humo**: IA / Data Science **sin hype*
 | S16 | **Semantic caching (y su trampa)** (ahorro de llamadas LLM vs respuestas equivocadas) | LLMs en prod | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-16/semantic_cache.ipynb) |
 | S17 | **Forecast: baseline vs ML** (el seasonal naive que cuesta ganar) | Series temporales | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-17/baseline_vs_ml.ipynb) |
 | S18 | **Monitor de drift sobre un stream** (PSI: detectar el cambio antes de que duela) | MLOps | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-18/drift_monitor.ipynb) |
+| S19 | **Chunking medido** (cómo cortás decide cuánto recupera tu RAG) | Retrieval/RAG | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicobargioni/ia-nb/blob/main/semana-19/chunking.ipynb) |
 
 *(se van sumando semana a semana)*
 
